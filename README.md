@@ -1,16 +1,26 @@
-# biometric
+A simple Flutter application demonstrating biometric authentication using fingerprint or face recognition with the local_auth package.
 
-A new Flutter project.
+This project showcases secure login implementation using device-level biometric authentication and route-based navigation.
 
-## Getting Started
+<!-- Features -->
+- Navigator.pushReplacementNamed is used to prevent back navigation
+- local_auth package is used
+- App triggers biometric authentication using LocalAuthentication.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🔹 auth_page.dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+UI for biometric login
+Calls AuthService().authenticateLocally()
+
+🔹 auth_service.dart
+
+Handles biometric authentication logic
+Uses local_auth package
+
+
+🔒 Security Note
+This implementation uses device-level biometric authentication.
+No biometric data is stored within the app.
+Authentication is handled securely by the OS.
